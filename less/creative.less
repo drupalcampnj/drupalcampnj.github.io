@@ -38,12 +38,22 @@ h4,
 h5,
 h6 {
     .sans-serif-font;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 a {
+    color: @theme-primary;
+    &:hover,
+    &:focus {
+        color: darken(@theme-primary, 10%);
+    }
 }
 
 p {
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .bg-primary {
@@ -130,11 +140,11 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: fade(white, 95%);
             border-color: fade(@theme-dark, 5%);
             .navbar-header .navbar-brand {
                 color: @theme-primary;
-                font-size: 14px;
+                // font-size: 14px;
                 &:hover,
                 &:focus {
                     color: darken(@theme-primary, 10%);
@@ -142,7 +152,7 @@ aside {
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @theme-dark;
+                color: @theme-blue;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -160,7 +170,7 @@ header {
     .background-cover;
     background-position: center;
     /* Garden */
-    background-image: url('../img/crops1.jpg');
+    background-image: url('../img/header-crops.jpg');
     /* Diner */
     // background-image: url('../img/diner2.jpg');
     text-align: center;
@@ -193,7 +203,7 @@ header {
         min-height: 100%;
         .header-content {
             position: absolute;
-            top: 37%;
+            top: 40%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -311,6 +321,10 @@ header {
     .button-variant(white;@theme-primary;@theme-primary);
 }
 
+.btn-info {
+    .button-variant(white;@theme-blue;@theme-blue);
+}
+
 .btn {
     .sans-serif-font;
     border: none;
@@ -325,28 +339,28 @@ header {
 
 // Extras
 // -- Highlight Color Customization
-::-moz-selection {
-    color: white;
-    text-shadow: none;
-    background: @theme-dark;
-}
+// ::-moz-selection {
+//     color: white;
+//     text-shadow: none;
+//     background: @theme-dark;
+// }
 
-::selection {
-    color: white;
-    text-shadow: none;
-    background: @theme-dark;
-}
+// ::selection {
+//     color: white;
+//     text-shadow: none;
+//     background: @theme-dark;
+// }
 
-img::selection {
-    color: white;
-    background: transparent;
-}
+// img::selection {
+//     color: white;
+//     background: transparent;
+// }
 
-img::-moz-selection {
-    color: white;
-    background: transparent;
-}
+// img::-moz-selection {
+//     color: white;
+//     background: transparent;
+// }
 
-body {
-    webkit-tap-highlight-color: @theme-dark;
-}
+// body {
+//     webkit-tap-highlight-color: @theme-dark;
+// }
